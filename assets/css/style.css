@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+ overflow-x: hidden;
+}
+
+#main{
+    width: 100lvw;
+    min-height: 100lvh;
+    background: #252734;
+}
+
+.circle-top,.circle-top::before , .circle-top::after{
+    border-radius: 50%;
+    border :1px solid rgba(255,255,255,.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.circle-top::before{
+    content: "Read this:";
+    width: 300px;
+    height: 300px;
+    display: block;
+    /*transform: translate(-5%,-5%);*/
+}
+.circle-top{
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%,-50%);
+}
+.circle-top::after {
+    content: "";
+    width: 450px;
+    height: 450px;
+    display: block;
+    transform: translate(-10%,-10%);
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    /*padding-top: 40px;*/
+    margin: auto;
+    position: fixed;
+    top : 10px;
+    left: 10%;
+    background: #252734;
+    border-radius: 40px;
+    height: 100px;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    color : #858792;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color .3s;
+}
+nav ul li:hover{
+    color: #fff;
+}
+
+.btn{
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    border: 1px solid #2e303d;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.btn:hover{
+    background: #2e303d;
+}
+
+p {
+    margin-bottom: 200px;
+}
+
+#main .content{
+    width: 70%;
+    margin:auto;
+    padding-top: 300px;
+    display: flex;
+}
+
+#nameBox h3,h2{
+    color: #fff;
+}
+
+#nameBox h3{
+    font-size: 4em;
+}
+#nameBox h2{
+    font-size: 5em;
+    width: 120%;
+
+}
+#mainInfo p {
+    font-size: 2em;
+    color: #858792;
+}
+#pic {
+    text-align: right;
+}
+#main .content #pic img{
+    width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+    #main .content {
+        flex-direction: column;
+    }
+
+}
