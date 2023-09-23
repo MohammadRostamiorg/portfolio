@@ -1,46 +1,50 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
- overflow-x: hidden;
+
+body {
+    overflow-x: hidden;
 }
 
-#main{
+#main {
     width: 100lvw;
     min-height: 100lvh;
     background: #252734;
 }
 
-.circle-top,.circle-top::before , .circle-top::after{
+.circle-top, .circle-top::before, .circle-top::after {
     border-radius: 50%;
-    border :1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .1);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
 }
 
-.circle-top::before{
+.circle-top::before {
     content: "Read this:";
     width: 300px;
     height: 300px;
     display: block;
     /*transform: translate(-5%,-5%);*/
 }
-.circle-top{
+
+.circle-top {
     width: 350px;
     height: 350px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .circle-top::after {
     content: "";
     width: 450px;
     height: 450px;
     display: block;
-    transform: translate(-10%,-10%);
+    transform: translate(-10%, -10%);
 
 }
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -48,13 +52,14 @@ nav {
     /*padding-top: 40px;*/
     margin: auto;
     position: fixed;
-    top : 10px;
+    top: 10px;
     left: 10%;
     background: #252734;
     border-radius: 40px;
     height: 100px;
     align-items: center;
 }
+
 nav ul {
     display: flex;
     justify-content: space-around;
@@ -62,18 +67,19 @@ nav ul {
     align-items: center;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
-    color : #858792;
+    color: #858792;
     font-size: 20px;
     cursor: pointer;
     transition: color .3s;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     color: #fff;
 }
 
-.btn{
+.btn {
     display: block;
     padding: 20px 25px;
     color: #fff;
@@ -86,47 +92,169 @@ nav ul li:hover{
     text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
     background: #2e303d;
 }
 
-p {
-    margin-bottom: 200px;
-}
-
-#main .content{
+#main .content {
     width: 70%;
-    margin:auto;
+    margin: auto;
     padding-top: 300px;
     display: flex;
 }
 
-#nameBox h3,h2{
+#nameBox h3, h2 {
     color: #fff;
 }
 
-#nameBox h3{
+#nameBox h3 {
     font-size: 4em;
 }
-#nameBox h2{
+
+#nameBox h2 {
     font-size: 5em;
-    width: 120%;
+    width: 100%;
 
 }
+
 #mainInfo p {
     font-size: 2em;
     color: #858792;
+    margin-bottom: 200px;
 }
+
 #pic {
     text-align: right;
 }
-#main .content #pic img{
+
+#main .content #pic img {
     width: 80%;
 }
 
+#soicalsBox {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+#soicalsBox .social {
+    padding: 10px;
+    border: 1px solid #2e303d;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#soicalsBox .social:hover{
+    background: #2e303d;
+}
+
+#soicalsBox .social i {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: cover;
+}
+.social i.linkedin{
+    background: url('../icons/linkedin.svg');
+}
+.social i.telegram{
+    background: url('../icons/telegram.svg');
+}
+#burger-icon {
+    display: none;
+}
 @media screen and (max-width: 1200px) {
-    #main .content {
+    nav {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        left: 0;
+        box-shadow: 2px 0 5px #222;
+        border-radius: 0;
+        top: 0;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    nav #burger-icon{
+        background: url("../icons/burger-menu.svg");
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: block;
+    }
+    #burger-icon.active{
+        background: url("../icons/close.svg");
+    }
+    nav ul {
         flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        top: -5px;
+        left: 0;
+        background: #2e303d;
+        width: 300px;
+        gap: 50px;
+        transform: translateX(-100%);
+        overflow: auto;
+        justify-content: start;
+        padding-top: 30px;
+        transition: all .3s;
+    }
+    nav ul.active{
+        transform: translateX(0);
+    }
+    .circle-top , .circle-top::before , .circle-top::after{
+        display: none;
+    }
+
+    #main .content{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    #pic img{
+        width: 50% !important;
+    }
+    #pic {
+        text-align: center;
+    }
+    #nameBox h2{
+        font-size: 2.6rem;
+    }
+    #mainInfo p {
+        font-size: 1em;
+        margin-bottom: 100px;
     }
 
 }
+
+@media screen and (max-width: 992px) {
+    #nameBox h3 {
+        font-size: 2.5em;
+    }
+
+    #nameBox h2 {
+        font-size: 3em;
+        width: 120%;
+
+    }
+
+    #soicalsBox{
+        justify-content: center;
+    }
+
+    #mainInfo .btn{
+        margin: auto;
+    }
+
+
+
+}
+
+    
+
