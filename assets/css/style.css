@@ -11,6 +11,7 @@ body {
     width: 100lvw;
     min-height: 100lvh;
     background: #252734;
+    padding-bottom: 50px;
 }
 
 .circle-top, .circle-top::before, .circle-top::after {
@@ -131,13 +132,13 @@ nav ul li:hover {
     width: 80%;
 }
 
-#soicalsBox {
+#socialsBox {
     margin-top: 50px;
     display: flex;
     gap: 10px;
 }
 
-#soicalsBox .social {
+#socialsBox .social {
     padding: 10px;
     border: 1px solid #2e303d;
     border-radius: 50%;
@@ -148,11 +149,11 @@ nav ul li:hover {
     align-items: center;
     cursor: pointer;
 }
-#soicalsBox .social:hover{
+#socialsBox .social:hover{
     background: #2e303d;
 }
 
-#soicalsBox .social i {
+#socialsBox .social i {
     width: 30px;
     height: 30px;
     display: block;
@@ -230,7 +231,14 @@ nav ul li:hover {
         font-size: 1em;
         margin-bottom: 100px;
     }
-
+    #mainSectionBottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #socialsBox{
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -244,17 +252,30 @@ nav ul li:hover {
 
     }
 
-    #soicalsBox{
+    #socialsBox{
         justify-content: center;
     }
 
     #mainInfo .btn{
         margin: auto;
     }
-
+    #mainSectionBottom{
+        display: block;
+    }
+    #socialsBox{
+        margin-top: 20px;
+    }
 
 
 }
 
-    
+
+
+/*skills sections styles*/
+
+
+#skillsSection{
+    height: 100vh;
+    background: #2A2C39;
+}
 
