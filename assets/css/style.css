@@ -248,7 +248,6 @@ nav ul li:hover {
 
     #nameBox h2 {
         font-size: 3em;
-        width: 120%;
 
     }
 
@@ -275,7 +274,45 @@ nav ul li:hover {
 
 
 #skillsSection{
-    height: 100vh;
+    /*height: 100vh;*/
     background: #2A2C39;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+#skillsSection h1{
+    font-size: 40px;
+    color: #fff;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+#skills{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+    margin-left: 10%;
+    flex-wrap: wrap;
+
 }
 
+.skill{
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #484853;
+    line-height: 50px;
+    box-shadow: 0 0 5px #2e303d;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.skill:hover{
+    background: #2e303d;
+}
+
+@media screen and (max-width: 768px){
+    .skill{
+        width: 90%;
+    }
+}
