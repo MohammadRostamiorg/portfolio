@@ -286,7 +286,7 @@ nav ul li:hover {
     width: 80%;
     margin-bottom: 20px;
 }
-#skills{
+#skills , #langs{
     width: 90%;
     margin: auto;
     display: flex;
@@ -296,7 +296,7 @@ nav ul li:hover {
 
 }
 
-.skill{
+.skill , .lang{
     width: 40%;
     height: 50px;
     text-align: center;
@@ -307,12 +307,65 @@ nav ul li:hover {
     border-radius: 5px;
     margin: 10px 0;
 }
-.skill:hover{
+.skill:hover , .lang:hover{
     background: #2e303d;
 }
 
 @media screen and (max-width: 768px){
-    .skill{
+    .skill , .lang{
         width: 90%;
     }
+}
+
+
+#projectsSection {
+    background: #252734;
+    padding: 50px 0;
+}
+
+#projectsSection h1{
+    font-size: 40px;
+    color: #fff;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+
+#projectsSlider{
+    width: 80%;
+    margin: auto;
+    background: #252734;
+    border-radius: 30px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+.project{
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    background: #2A2C39;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #201f1f;
+}
+
+.project h3{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    line-height: 3em;
+}
+
+.project p.project_desc{
+    box-sizing: border-box;
+    color: #fff;
+    padding: 1rem;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 160px;
 }
