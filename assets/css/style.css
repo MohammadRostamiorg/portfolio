@@ -369,3 +369,11 @@ nav ul li:hover {
     overflow: hidden;
     max-height: 160px;
 }
+
+.project .btn-open-project{
+    position: relative;
+    bottom: -30px;
+    transform: translateX(50%);
+    box-shadow: 0 0 5px #00000038;
+
+}
