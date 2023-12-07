@@ -1,10 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-}
+    scroll-behavior: smooth;
 
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
 body {
     overflow-x: hidden;
+    font-family: Poppins;
 }
 
 #main {
@@ -76,8 +82,13 @@ nav ul li {
     transition: color .3s;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
     color: #fff;
+}
+nav ul li a {
+    display: block;
+    color: #858792;
+    text-decoration: none;
 }
 
 .btn {
@@ -89,7 +100,7 @@ nav ul li:hover {
     cursor: pointer;
     transition: all .3s;
     text-decoration: none;
-    width: 150px;
+    width: 160px;
     text-align: center;
 }
 
@@ -149,7 +160,8 @@ nav ul li:hover {
     align-items: center;
     cursor: pointer;
 }
-#socialsBox .social:hover{
+
+#socialsBox .social:hover {
     background: #2e303d;
 }
 
@@ -159,15 +171,19 @@ nav ul li:hover {
     display: block;
     background-size: cover;
 }
-.social i.linkedin{
+
+.social i.linkedin {
     background: url('../icons/linkedin.svg');
 }
-.social i.telegram{
+
+.social i.telegram {
     background: url('../icons/telegram.svg');
 }
+
 #burger-icon {
     display: none;
 }
+
 @media screen and (max-width: 1200px) {
     nav {
         flex-direction: row-reverse;
@@ -180,16 +196,19 @@ nav ul li:hover {
         box-sizing: border-box;
         padding: 0 20px;
     }
-    nav #burger-icon{
+
+    nav #burger-icon {
         background: url("../icons/burger-menu.svg");
         width: 50px;
         height: 50px;
         cursor: pointer;
         display: block;
     }
-    #burger-icon.active{
+
+    #burger-icon.active {
         background: url("../icons/close.svg");
     }
+
     nav ul {
         flex-direction: column;
         position: absolute;
@@ -205,38 +224,45 @@ nav ul li:hover {
         padding-top: 30px;
         transition: all .3s;
     }
-    nav ul.active{
+
+    nav ul.active {
         transform: translateX(0);
     }
-    .circle-top , .circle-top::before , .circle-top::after{
+
+    .circle-top, .circle-top::before, .circle-top::after {
         display: none;
     }
 
-    #main .content{
+    #main .content {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 100px;
     }
 
-    #pic img{
+    #pic img {
         width: 50% !important;
     }
+
     #pic {
         text-align: center;
     }
-    #nameBox h2{
+
+    #nameBox h2 {
         font-size: 2.6rem;
     }
+
     #mainInfo p {
         font-size: 1em;
         margin-bottom: 100px;
     }
-    #mainSectionBottom{
+
+    #mainSectionBottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    #socialsBox{
+
+    #socialsBox {
         margin-top: 0;
     }
 }
@@ -251,17 +277,19 @@ nav ul li:hover {
 
     }
 
-    #socialsBox{
+    #socialsBox {
         justify-content: center;
     }
 
-    #mainInfo .btn{
+    #mainInfo .btn {
         margin: auto;
     }
-    #mainSectionBottom{
+
+    #mainSectionBottom {
         display: block;
     }
-    #socialsBox{
+
+    #socialsBox {
         margin-top: 20px;
     }
 
@@ -269,24 +297,25 @@ nav ul li:hover {
 }
 
 
-
 /*skills sections styles*/
 
 
-#skillsSection{
+#skillsSection {
     /*height: 100vh;*/
     background: #2A2C39;
     padding: 50px 0;
     box-sizing: border-box;
 }
-#skillsSection h1{
+
+#skillsSection h1 {
     font-size: 40px;
     color: #fff;
     margin: auto;
     width: 80%;
     margin-bottom: 20px;
 }
-#skills , #langs{
+
+#skills, #langs {
     width: 90%;
     margin: auto;
     display: flex;
@@ -296,7 +325,7 @@ nav ul li:hover {
 
 }
 
-.skill , .lang{
+.skill, .lang {
     width: 40%;
     height: 50px;
     text-align: center;
@@ -307,12 +336,13 @@ nav ul li:hover {
     border-radius: 5px;
     margin: 10px 0;
 }
-.skill:hover , .lang:hover{
+
+.skill:hover, .lang:hover {
     background: #2e303d;
 }
 
-@media screen and (max-width: 768px){
-    .skill , .lang{
+@media screen and (max-width: 768px) {
+    .skill, .lang {
         width: 90%;
     }
 }
@@ -323,7 +353,7 @@ nav ul li:hover {
     padding: 50px 0;
 }
 
-#projectsSection h1{
+#projectsSection h1 {
     font-size: 40px;
     color: #fff;
     margin: auto;
@@ -332,7 +362,7 @@ nav ul li:hover {
 }
 
 
-#projectsSlider{
+#projectsSlider {
     width: 80%;
     margin: auto;
     background: #252734;
@@ -345,7 +375,7 @@ nav ul li:hover {
 }
 
 
-.project{
+.project {
     width: 400px;
     height: 400px;
     margin: 10px;
@@ -354,14 +384,14 @@ nav ul li:hover {
     box-shadow: 0 0 10px #201f1f;
 }
 
-.project h3{
+.project h3 {
     font-size: 2em;
     color: #fff;
     text-align: center;
     line-height: 3em;
 }
 
-.project p.project_desc{
+.project p.project_desc {
     box-sizing: border-box;
     color: #fff;
     padding: 1rem;
@@ -370,10 +400,46 @@ nav ul li:hover {
     max-height: 160px;
 }
 
-.project .btn-open-project{
+.project .btn-open-project {
     position: relative;
     bottom: -30px;
     transform: translateX(50%);
     box-shadow: 0 0 5px #00000038;
 
 }
+@media screen and (max-width: 480px) {
+    .project h3{
+        font-size: 1.6em;
+    }
+    .project .btn-open-project{
+        transform: translateX(25%);
+    }
+}
+#contactSection {
+    height: 40vh;
+    background: #2A2C39;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+#contactBox{
+    width: 80%;
+    margin: auto;
+}
+#contactBox h2{
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#contactBox .row span.label{
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
+#contactBox .row span.value{
+    color: #e6e6e6;
+    font-size: 1.2em;
+}
+
+
